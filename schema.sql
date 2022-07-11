@@ -51,4 +51,8 @@ CONSTRAINT species_id
 FOREIGN KEY (animals_id)
 REFERENCES animals(id));
 
+CREATE INDEX idx_visits_animals ON visits(animals_id);
 
+CREATE INDEX idx_visits_vets ON visits(vets_id);
+
+CREATE INDEX idx_owners_email ON owners(email);
